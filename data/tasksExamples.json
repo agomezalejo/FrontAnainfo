@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "descripcion": "Crear el diseño de la página de inicio",
+    "estado": "no iniciada"
+  },
+  {
+    "id": 2,
+    "descripcion": "Implementar la funcionalidad de inicio de sesión",
+    "estado": "en progreso"
+  },
+  {
+    "id": 3,
+    "descripcion": "Agregar validaciones de entrada de datos",
+    "estado": "completada"
+  },
+  {
+    "id": 4,
+    "descripcion": "Optimizar el rendimiento de la aplicación",
+    "estado": "no iniciada"
+  },
+  {
+    "id": 5,
+    "descripcion": "Realizar pruebas de integración",
+    "estado": "en progreso"
+  },
+  {
+    "id": 6,
+    "descripcion": "Crear la estructura de base de datos",
+    "estado": "completada"
+  },
+  {
+    "id": 7,
+    "descripcion": "Desarrollar la funcionalidad de búsqueda",
+    "estado": "en progreso"
+  },
+  {
+    "id": 8,
+    "descripcion": "Diseñar el logo y la identidad de la marca",
+    "estado": "no iniciada"
+  },
+  {
+    "id": 9,
+    "descripcion": "Realizar pruebas de rendimiento",
+    "estado": "no iniciada"
+  },
+  {
+    "id": 10,
+    "descripcion": "Documentar el código fuente",
+    "estado": "completada"
+  }
+]

@@ -21,14 +21,14 @@ export default function TableProjets() {
 
     const showModal = () => {
         if (modalOpen) {
-            return <ModalCreate modalOpen={modalOpen} setModalOpen={setmodalOpen} list={[]}/>
+            return <ModalCreate modalOpen={modalOpen} setModalOpen={setmodalOpen} list={[]} />
         }
         return <></>
     }
 
     return (
         <>
-            <div className="relative overflow-x-auto shadow-md sm:rounded-lg container max-w-7xl mx-auto mt-8 flex flex-col text-black">
+            <div className="relative overflow-x-auto  sm:rounded-lg container max-w-7xl mx-auto mt-8 flex flex-col text-black">
                 <h1 className="text-3xl my-5 ml-3 font-bold">
                     Lista de Proyectos
                 </h1>
@@ -56,16 +56,18 @@ export default function TableProjets() {
                         </tr>
                     </thead>
                     <tbody>
-                        { renderProjects () }
+                        {renderProjects()}
                     </tbody>
                 </table>
-                <button 
-                    className=" p-3  border boder-2 border-gray-900 rounded-sm self-end m-3 hover:bg-gray-200 shadow-md shadow-gray-900"
+                <button
+                    className=" p-3 bg-green-600 rounded-lg  border boder-2 border-gray-900 w-20 h-12 self-end m-3 hover:bg-gray-200 shadow-md shadow-gray-900"
                     onClick={() => { setmodalOpen(true) }}
-                  >Crear</button>
+                >
+                    Crear
+                </button>
             </div>
 
-            { showModal() }
+            {showModal()}
         </>
     )
 }

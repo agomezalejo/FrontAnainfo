@@ -1,6 +1,7 @@
-import { ProjectProps } from "./types";
+import Link from "next/link";
+import { ProjectInfoProps } from "./types";
 
-export default function ProjectGridRow ({ project }: ProjectProps) {
+export default function ProjectGridRow({ project }: ProjectInfoProps) {
     return (
         <tr key={project.id} className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
             <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -19,7 +20,7 @@ export default function ProjectGridRow ({ project }: ProjectProps) {
                 {project.estado}
             </td>
             <td className="px-6 py-4">
-                <a href="/project" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Abrir</a>
+                <Link href="/project" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Abrir</Link>
             </td>
         </tr>
     )
