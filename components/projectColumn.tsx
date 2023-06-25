@@ -1,8 +1,12 @@
+import { useState } from "react";
 import tasksExamples from "../data/tasksExamples.json";
+import ModalCreateTask from "./modalCreateTask";
 import Task from "./task";
 import { TaskProps } from "./types";
 
 export default function ProjectColumn() {
+
+    const [modalOpen, setModalOpen] = useState(false);
 
     function getRandomTasks(count: number): any[] {
         // Agarra tasks random del json
@@ -35,32 +39,35 @@ export default function ProjectColumn() {
         return htmlResponse
     }
 
+    const showModal = () => {
+        if (modalOpen) {
+            return <ModalCreateTask modalOpen setModalOpen={setModalOpen} list={[]} />
+        }
+        return <></>
+    }
+
     return (
-        <div className="h-auto w-auto shadow-lg flex-grow flex flex-col relative bg-gray-50 dark:bg-gray-700 dark:text-gray-400 rounded-md">
-            {/* Titulo  */}
+        <>
+            <div className="h-auto w-auto shadow-lg flex-grow flex flex-col relative bg-gray-50 dark:bg-gray-700 dark:text-gray-400 rounded-md">
+                {/* Titulo  */}
 
-            <div>
-                <h1 className="text-2xl font-semibold p-3 w-50 text-white bg-gray-800 rounded-md ">Columna 1</h1>
+                <div>
+                    <h1 className="text-2xl font-semibold p-3 w-50 text-white bg-gray-800 rounded-md ">Tareas</h1>
+                </div>
+
+                {/* Lista de tareas */}
+
+                <div className="pb-12 max-h-21">
+
+                    {renderTasks(getRandomTasks(5))}
+
+                </div>
+
             </div>
 
-            {/* Lista de tareas */}
+            {showModal()}
 
-            <div className="pb-12 max-h-21">
+        </>
 
-                {renderTasks(getRandomTasks(5))}
-
-            </div>
-
-            {/* Agregar tarea */}
-
-            <div className="absolute bottom-0 w-full flex justify-end">
-                <button
-                    type="button"
-                    className="text-white  focus:ring-2  font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-blue-500"
-                > Agregar
-                </button>
-            </div>
-
-        </div>
     )
 }
